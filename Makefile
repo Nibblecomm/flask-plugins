@@ -28,4 +28,4 @@ develop:
 	    python setup.py develop
 
 test:
-	    nosetests --cover-package=flask_plugins --with-coverage
+	    nosetests --cover-package=spotipo_plugins --with-coverage

@@ -2,7 +2,7 @@ import os
 import unittest
 
 from flask import Flask
-from flask_plugins import PluginManager, PluginError, get_enabled_plugins, \
+from spotipo_plugins import PluginManager, PluginError, get_enabled_plugins, \
     get_all_plugins, get_plugin, get_plugin_from_all
 
 

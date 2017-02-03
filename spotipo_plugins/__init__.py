@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 """
-    flask_plugins
+    spotipo_plugins
     ~~~~~~~~~~~~~
 
     The Plugin class that every plugin should implement
 
-    The metadata part (with the info.json file) is inspired by Flask-Themes2
-    and the EventManager is taken from Zine.
+    Modified version of flask-plugins from https://github.com/sh4nks/flask-plugins
 
+    :copyright: (c) 2017 by Nibblecomm.
     :copyright: (c) 2014 by the FlaskBB Team.
     :license: BSD, see LICENSE for more details.
 """
@@ -28,7 +28,7 @@ except ImportError:
 
 from ._compat import itervalues, iteritems, intern_method
 
-__version__ = "1.6.1"
+__version__ = "0.1"
 __author__ = "Peter Justin"
 
 

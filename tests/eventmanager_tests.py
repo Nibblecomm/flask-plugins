@@ -3,7 +3,7 @@ import unittest
 from jinja2 import Markup
 from flask import Flask
 
-from flask_plugins import PluginManager, EventManager, connect_event, \
+from spotipo_plugins import PluginManager, EventManager, connect_event, \
     emit_event, iter_listeners
 
 

@@ -21,7 +21,7 @@ and then you need to initialize it somewhere in your code.
 
 .. code:: python
 
-    from flask_plugins import PluginManager
+    from spotipo_plugins import PluginManager
 
     plugin_manager = PluginManager(app)
 
@@ -29,7 +29,7 @@ Want to use the factory pattern? No problem!
 
 .. code:: python
 
-    from flask_plugins import PluginManager
+    from spotipo_plugins import PluginManager
 
     plugin_manager = PluginManager()
     plugin_manager.init_app(app)
@@ -37,9 +37,9 @@ Want to use the factory pattern? No problem!
 Resources
 `````````
 
-* `source <https://github.com/sh4nks/flask-plugins>`_
+* `source <ttps://github.com/Nibblecomm/spotipo-plugins>`_
 * `docs <https://flask-plugins.readthedocs.org/en/latest>`_
-* `issues <https://github.com/sh4nks/flask-plugins/issues>`_
+* `issues <ttps://github.com/Nibblecomm/spotipo-plugins/issues>`_
 
 """
 from setuptools import setup
@@ -50,7 +50,7 @@ import ast
 def _get_version():
     version_re = re.compile(r'__version__\s+=\s+(.*)')
 
-    with open('flask_plugins/__init__.py', 'rb') as fh:
+    with open('spotipo_plugins/__init__.py', 'rb') as fh:
         version = ast.literal_eval(
             version_re.search(fh.read().decode('utf-8')).group(1))
 
@@ -58,15 +58,15 @@ def _get_version():
 
 
 setup(
-    name='Flask-Plugins',
+    name='Spotipo-Plugins',
     version=_get_version(),
-    url='https://github.com/sh4nks/flask-plugins',
+    url='https://github.com/Nibblecomm/spotipo-plugins',
     license='BSD',
-    author='Peter Justin',
-    author_email='peter.justin@outlook.com',
-    description='Create plugins for your Flask application',
+    author='Rakesh Mukundan',
+    author_email='rakesh@nibblecomm.com',
+    description='Create plugins for spotipo',
     long_description=__doc__,
-    packages=['flask_plugins'],
+    packages=['spotipo_plugins'],
     include_package_data=True,
     zip_safe=False,
     platforms='any',
@@ -78,7 +78,7 @@ setup(
         'nose>=1.0',
     ],
     classifiers=[
-        'Development Status :: 4 - Beta',
+        'Development Status :: Beta',
         'Framework :: Flask',
         'Environment :: Web Environment',
         'Intended Audience :: Developers',

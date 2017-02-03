@@ -1,4 +1,4 @@
-from flask_plugins import Plugin
+from spotipo_plugins import Plugin
 
 
 __plugin__ = "TestOnePlugin"
