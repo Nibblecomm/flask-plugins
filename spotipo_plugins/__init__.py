@@ -28,8 +28,8 @@ except ImportError:
 
 from ._compat import itervalues, iteritems, intern_method
 
-__version__ = "0.1"
-__author__ = "Peter Justin"
+__version__ = "0.2"
+__author__ = "Rakesh Mukundan"
 
 
 class PluginError(Exception):
@@ -119,6 +119,11 @@ class Plugin(object):
 
         #: The plugin's version string.
         self.version = i.get('version')
+
+        #: The plugin's type, could be general,login,prelogin,postlogin and 
+        #: export
+        self.type = i.get('type')
+
 
         #: Any additional options. These are entirely application-specific,
         #: and may determine other aspects of the application's behavior.
