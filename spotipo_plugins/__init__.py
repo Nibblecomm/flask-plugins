@@ -496,7 +496,7 @@ class TemplateEventResult(list):
         list.__init__(self, items)
 
     def __unicode__(self):
-        return u''.join(map(str, self))
+        return u''.join(map(unicode, self))
 
     def __str__(self):
         if sys.version_info[0] >= 3:
