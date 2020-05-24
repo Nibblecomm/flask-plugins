@@ -28,7 +28,7 @@ except ImportError:
 
 from ._compat import itervalues, iteritems, intern_method
 
-__version__ = "0.2"
+__version__ = "0.3"
 __author__ = "Rakesh Mukundan"
 
 
@@ -496,7 +496,11 @@ class TemplateEventResult(list):
         list.__init__(self, items)
 
     def __unicode__(self):
-        return u''.join(map(unicode, self))
+        if sys.version_info[0] >= 3:
+            return u''.join(map(str, self))
+        else:
+            return u''.join(map(unicode, self))
+        
 
     def __str__(self):
         if sys.version_info[0] >= 3:
